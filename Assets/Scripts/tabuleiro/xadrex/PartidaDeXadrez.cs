@@ -113,7 +113,7 @@ namespace xadrex {
 
         }
 
-        public void realizaJogada(Posicao origem, Posicao destino) {
+        public Peca realizaJogada(Posicao origem, Posicao destino) {
             Peca pecaCapturada =  executaMovimento(origem, destino);
             if (estaEmXeque(jogadorAtual)) {
                 desfazMovimento(origem, destino, pecaCapturada);
@@ -147,6 +147,7 @@ namespace xadrex {
                 turno++;
                 mudaJogador();
             }
+            return pecaCapturada;
         }
 
         public void validarPosicaoDeOrigem(Posicao pos) {
@@ -167,6 +168,7 @@ namespace xadrex {
             }
         }
 
+        
 
         private void mudaJogador() {
             if (jogadorAtual == Cor.Branca) {
