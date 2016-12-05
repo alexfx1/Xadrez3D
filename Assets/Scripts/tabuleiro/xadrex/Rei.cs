@@ -27,7 +27,7 @@ namespace xadrex {
             Posicao pos = new Posicao(0, 0);
 
             // acima
-            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);  
+            pos.definirValores(posicao.linha - 1, posicao.coluna);  
             if (tab.posicaoValida(pos) && podeMover(pos)) {
                 mat[pos.linha, pos.coluna] = true;
             }

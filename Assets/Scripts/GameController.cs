@@ -30,8 +30,8 @@ class GameController : MonoBehaviour {
         pecaEscolhida = null;
         corOriginal = txtMsg.color;
 
-        posDescarteBrancas = new Vector3(-1.2f, 0f, -1f);
-        posDescartePretas = new Vector3(1.2f, 0f, 1f);
+        posDescarteBrancas = new Vector3(-3f, 0f, -3f);
+        posDescartePretas = new Vector3(3f, 0f, 3f);
 
         partida = new PartidaDeXadrez();
 
@@ -133,11 +133,11 @@ class GameController : MonoBehaviour {
         GameObject obj = peca.obj; 
         if (peca.cor == Cor.Branca) {
             obj.transform.position = posDescarteBrancas;
-            posDescarteBrancas.z = posDescarteBrancas.z + 0.2f;
+            posDescarteBrancas.z = posDescarteBrancas.z + 0.6f;
         }
         else {
             obj.transform.position = posDescartePretas;
-            posDescartePretas.z = posDescartePretas.z - 0.2f;
+            posDescartePretas.z = posDescartePretas.z - 0.6f;
         }
     }
 }
